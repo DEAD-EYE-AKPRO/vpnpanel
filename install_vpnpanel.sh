@@ -5,7 +5,7 @@ echo "=== VPN Panel Auto Installer ==="
 echo "=== AKAKAKAKAKAKAKAKAKAKAKAK ==="
 
 
-DOMAIN_NAME=(ip addr show $(ip route | awk '/default/ { print $5 }') | grep "inet " | awk '{print $2}' | cut -d'/' -f1)
+DOMAIN_NAME="(ip addr show $(ip route | awk '/default/ { print $5 }') | grep "inet " | awk '{print $2}' | cut -d'/' -f1)"
 APP_DIR="/opt/vpnpanel"
 REPO_URL="https://github.com/DEAD-EYE-AKPRO/vpnpanel.git"
 FLASK_PORT="1227"
