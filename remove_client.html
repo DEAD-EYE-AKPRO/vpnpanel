@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Remove Client</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Remove VPN Client</h2>
+  <form method="post">
+    <label>Client Name:</label><br>
+    <input type="text" name="client_name"><br>
+    <button type="submit">Remove Client</button>
+  </form>
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+  <a href="/dashboard">Back</a>
+</body>
+</html>
