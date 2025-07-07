@@ -10,7 +10,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 PASSWORD_HASH_FILE = "password.hash"
-VPN_SCRIPT = "openvpn-install.sh"  # CHANGE THIS to your script path
+VPN_SCRIPT = "openvpn-install.sh"
 
 @app.before_first_request
 def check_password():
@@ -74,7 +74,7 @@ def add_client():
     message = None
     if request.method == "POST":
         client_name = request.form["client_name"]
-        # Run the angristan script non-interactively
+    
         try:
             subprocess.run(
                 ["sudo", VPN_SCRIPT],
